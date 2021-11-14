@@ -1,0 +1,296 @@
+<html lang="en">
+<head>
+    <!-- Made with ♥ -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Jarvis dela Rosa Portfolio">
+    <meta name="keywords" content="painter portfolio art digital oil">
+    <meta name="author" content="Maxime Hunault">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Title</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+
+    .h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, p{
+        font-family: 'Poppins', sans-serif;
+    }
+    body {
+        background: #f6f5ee!important;
+    }
+    .navbar{
+        padding-top: 3.5rem!important;
+        padding-bottom: 1rem!important;
+    }
+    .navbar-brand{
+        font-family: 'Reenie Beanie', cursive;
+        font-size: 1.90rem!important;
+    }
+    .profile-menu .dropdown-menu {
+        right: 0;
+        left: unset;
+    }
+    .profile-menu .fa-fw {
+        margin-right: 15px;
+    }
+    .toggle-change::after {
+        border-top: 0;
+        border-bottom: 0.3em solid;
+    }
+    .fade{
+        animation: fadein .5s ease-in-out;
+    }
+    @keyframes fadein {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    .changeColortxt{
+        color: darkgray;
+    }
+
+    .modal-target {
+        width: 300px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .modal-target:hover {
+        opacity: 0.7;
+    }
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        /*background-color: rgb(0,0,0); !* Fallback color *!*/
+        /*background-color: rgba(0,0,0,0.8); !* Black w/ opacity *!*/
+        backdrop-filter: blur(1rem);
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        opacity: 1 !important;
+        max-width: 40%;
+    }
+
+    /* Caption of Modal Image */
+    .modal-caption {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 40%;
+        text-align: center;
+        color: white;
+        font-weight: 700;
+        font-size: 1em;
+        margin-top: 32px;
+    }
+
+    /* Add Animation */
+    .modal-content, .modal-caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {-webkit-atransform:scale(0)}
+        to {-webkit-transform:scale(1)}
+    }
+
+    @keyframes zoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+    }
+
+    /* The Close Button */
+    .modal-close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: gray;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .modal-close:hover,
+    .modal-close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top">
+    <div class="container">
+        <a class="navbar-brand"  href="#">Jarvis dela Rosa</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a id="firstButton" class="nav-link" href="#projects" onclick="showDigitalPainting()">Digital painting</a>
+                </li>
+                <li class="nav-item">
+                    <a id="secondButton" class="nav-link" href="#" onclick="showCharcoal()">Charcoal</a>
+                </li>
+                <li class="nav-item">
+                    <a id="thirdButton" class="nav-link" href="#" onclick="showOilPainting()">Oil painting</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Gallery -->
+<div id="digitalPainting" class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img src="img/17.png" class="w-100 shadow-1-strong rounded mb-4 modal-target" alt="" />
+            <img src="img/18.png" class="w-100 shadow-1-strong rounded mb-4  modal-target" alt="" />
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="img/20.png" class="w-100 shadow-1-strong rounded mb-4  modal-target" alt="" />
+            <img src="img/21.png" class="w-100 shadow-1-strong rounded mb-4  modal-target" alt="" />
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="img/22.png" class="w-100 shadow-1-strong rounded mb-4  modal-target" alt="" />
+        </div>
+    </div>
+</div>
+<!-- Gallery -->
+
+<div id="charcoal" class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img src="img/1.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+            <img src="img/2.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+            <img src="img/8.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0" >
+            <img src="img/3.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+            <img src="img/4.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+            <img src="img/9.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="img/5.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+            <img src="img/6.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+            <img src="img/7.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+        </div>
+    </div>
+</div>
+
+<div id="oilPainting" class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            <img src="img/10.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+            <img src="img/11.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="img/13.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+            <img src="img/27.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+        </div>
+        <div class="col-lg-4 mb-4 mb-lg-0">
+            <img src="img/14.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+            <img src="img/28.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+            <img src="img/15.png" class="w-100 shadow-1-strong rounded mb-4  modal-target"/>
+        </div>
+
+    </div>
+</div>
+<div id="modal" class="modal">
+    <span id="modal-close" class="modal-close">&times;</span>
+    <img id="modal-content" class="modal-content">
+    <div id="modal-caption" class="modal-caption"></div>
+</div>
+
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>© Copyright Jarvis dela Rosa 2021</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    // Toggle group buttons
+    document.getElementById('charcoal').style.display = 'none';
+    document.getElementById('oilPainting').style.display = 'none';
+
+    const div = document.getElementById('digitalPainting');
+
+    function showDigitalPainting(){
+        document.getElementById('charcoal').style.display = 'none';
+        document.getElementById('oilPainting').style.display = 'none';
+        document.getElementById('digitalPainting').style.display = 'inherit';
+        // document.getElementById('firstButton').style.color = 'darkgray';
+        // document.getElementById('secondButton').style.color = 'white';
+        // document.getElementById('thirdButton').style.color = 'white';
+        // div.classList.add("fade");
+    }
+    function showCharcoal(){
+        document.getElementById('digitalPainting').style.display = 'none';
+        document.getElementById('oilPainting').style.display = 'none';
+        document.getElementById('charcoal').style.display = 'inherit';
+        // document.getElementById('secondButton').style.color = 'darkgray';
+        // document.getElementById('firstButton').style.color = 'white';
+        // document.getElementById('thirdButton').style.color = 'white';
+    }
+    function showOilPainting(){
+        document.getElementById('digitalPainting').style.display = 'none';
+        document.getElementById('charcoal').style.display = 'none';
+        document.getElementById('oilPainting').style.display = 'inherit';
+        // document.getElementById('thirdButton').style.color = 'darkgray';
+        // document.getElementById('secondButton').style.color = 'white';
+        // document.getElementById('firstButton').style.color = 'white';
+    }
+    // End function
+    // Modal Setup
+    var modal = document.getElementById('modal');
+
+    var modalClose = document.getElementById('modal-close');
+    modalClose.addEventListener('click', function() {
+        modal.style.display = "none";
+    });
+
+    // global handler
+    document.addEventListener('click', function (e) {
+        if (e.target.className.indexOf('modal-target') !== -1) {
+            var img = e.target;
+            var modalImg = document.getElementById("modal-content");
+            var captionText = document.getElementById("modal-caption");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
